@@ -1,0 +1,236 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "Nike",
+      "description": "Just Do It - Leading sportswear brand",
+      "logo": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop&crop=center",
+      "established": "1971",
+      "country": "USA"
+    },
+    {
+      "id": 2,
+      "name": "Adidas",
+      "description": "Impossible is Nothing - German sportswear giant",
+      "logo": "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400&h=400&fit=crop&crop=center",
+      "established": "1949",
+      "country": "Germany"
+    },
+    {
+      "id": 3,
+      "name": "Puma",
+      "description": "Forever Faster - International sportswear brand",
+      "logo": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center",
+      "established": "1948",
+      "country": "Germany"
+    },
+    {
+      "id": 4,
+      "name": "Under Armour",
+      "description": "I Will - Performance apparel company",
+      "logo": "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=400&fit=crop&crop=center",
+      "established": "1996",
+      "country": "USA"
+    },
+    {
+      "id": 5,
+      "name": "New Balance",
+      "description": "Endorsed by No One - Premium athletic footwear",
+      "logo": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop&crop=center",
+      "established": "1906",
+      "country": "USA"
+    },
+    {
+      "id": 6,
+      "name": "Reebok",
+      "description": "Be More Human - Fitness and lifestyle brand",
+      "logo": "https://images.unsplash.com/photo-1520256862855-398228c41684?w=400&h=400&fit=crop&crop=center",
+      "established": "1958",
+      "country": "UK"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "brandId": 1,
+      "name": "Air Max 270",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&crop=center",
+      "description": "The Nike Air Max 270 delivers visible cushioning under every step.",
+      "category": "Running Shoes",
+      "sizes": ["7", "8", "9", "10", "11", "12"],
+      "colors": ["Black/White", "Grey/Red", "Blue/White"],
+      "material": "Synthetic and textile upper",
+      "features": ["Air Max cushioning", "Breathable upper", "Rubber outsole"]
+    },
+    {
+      "id": 2,
+      "brandId": 1,
+      "name": "React Infinity Run",
+      "price": 160,
+      "image": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&h=600&fit=crop&crop=center",
+      "description": "Nike React Infinity Run Flyknit designed to help reduce injury.",
+      "category": "Running Shoes",
+      "sizes": ["6", "7", "8", "9", "10", "11"],
+      "colors": ["White/Black", "Navy/Orange", "Pink/Grey"],
+      "material": "Flyknit upper",
+      "features": ["React foam", "Flyknit construction", "Wider platform"]
+    },
+    {
+      "id": 3,
+      "brandId": 1,
+      "name": "Dri-FIT Training Tee",
+      "price": 35,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop&crop=center",
+      "description": "Nike Dri-FIT technology helps you stay dry and comfortable.",
+      "category": "Athletic Apparel",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "colors": ["Black", "White", "Grey", "Navy", "Red"],
+      "material": "100% Polyester",
+      "features": ["Dri-FIT technology", "Standard fit", "Crew neck"]
+    },
+    {
+      "id": 4,
+      "brandId": 2,
+      "name": "Ultraboost 22",
+      "price": 190,
+      "image": "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&h=600&fit=crop&crop=center",
+      "description": "Experience incredible energy return with Ultraboost 22.",
+      "category": "Running Shoes",
+      "sizes": ["7", "8", "9", "10", "11", "12"],
+      "colors": ["Core Black", "Cloud White", "Grey Three"],
+      "material": "Primeknit upper",
+      "features": ["Boost midsole", "Continental rubber outsole", "Sock-like fit"]
+    },
+    {
+      "id": 5,
+      "brandId": 2,
+      "name": "Stan Smith",
+      "price": 80,
+      "image": "https://images.unsplash.com/photo-1594989168516-2cf313ced5f5?w=600&h=600&fit=crop&crop=center",
+      "description": "The timeless adidas Stan Smith with classic leather upper.",
+      "category": "Lifestyle Shoes",
+      "sizes": ["6", "7", "8", "9", "10", "11", "12"],
+      "colors": ["Cloud White/Green", "All White", "Black/White"],
+      "material": "Leather upper",
+      "features": ["Perforated 3-Stripes", "Rubber outsole", "OrthoLite sockliner"]
+    },
+    {
+      "id": 6,
+      "brandId": 2,
+      "name": "3-Stripes Track Jacket",
+      "price": 70,
+      "image": "https://images.unsplash.com/photo-1506629905607-d2bf4b70fb36?w=600&h=600&fit=crop&crop=center",
+      "description": "Classic adidas track jacket with iconic 3-Stripes.",
+      "category": "Athletic Apparel",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Black", "Navy", "Burgundy"],
+      "material": "Recycled polyester tricot",
+      "features": ["Full zip", "Side pockets", "Ribbed cuffs"]
+    },
+    {
+      "id": 7,
+      "brandId": 3,
+      "name": "RS-X³ Puzzle",
+      "price": 110,
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=600&fit=crop&crop=center",
+      "description": "PUMA RS-X³ with bold colors and retro running silhouette.",
+      "category": "Lifestyle Shoes",
+      "sizes": ["7", "8", "9", "10", "11"],
+      "colors": ["White/Multi", "Black/Grey", "Blue/Yellow"],
+      "material": "Mesh and synthetic upper",
+      "features": ["RS foam", "Rubber outsole", "Lace closure"]
+    },
+    {
+      "id": 8,
+      "brandId": 3,
+      "name": "Future Z 1.2 FG/AG",
+      "price": 200,
+      "image": "https://images.unsplash.com/photo-1511067007398-5ac4a4d465a6?w=600&h=600&fit=crop&crop=center",
+      "description": "PUMA Future Z football boots for ultimate agility.",
+      "category": "Football Boots",
+      "sizes": ["6", "7", "8", "9", "10", "11"],
+      "colors": ["Yellow Alert", "Black/Orange", "White/Blue"],
+      "material": "FUZIONFIT+ upper",
+      "features": ["Dynamic Motion System", "FG/AG outsole", "Regular fit"]
+    },
+    {
+      "id": 9,
+      "brandId": 4,
+      "name": "HOVR Phantom 2",
+      "price": 140,
+      "image": "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=600&h=600&fit=crop&crop=center",
+      "description": "Under Armour HOVR Phantom 2 with energy return technology.",
+      "category": "Running Shoes",
+      "sizes": ["7", "8", "9", "10", "11", "12"],
+      "colors": ["Black/White", "Grey/Blue", "Red/Black"],
+      "material": "Engineered mesh upper",
+      "features": ["HOVR foam", "MapMyRun connected", "Rubber outsole"]
+    },
+    {
+      "id": 10,
+      "brandId": 4,
+      "name": "HeatGear Armour Tee",
+      "price": 30,
+      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=600&fit=crop&crop=center",
+      "description": "Under Armour HeatGear fabric keeps you cool and dry.",
+      "category": "Athletic Apparel",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["Black", "White", "Grey", "Navy"],
+      "material": "Polyester/Elastane blend",
+      "features": ["HeatGear fabric", "Moisture-wicking", "Anti-odor technology"]
+    },
+    {
+      "id": 11,
+      "brandId": 5,
+      "name": "Fresh Foam X 1080v12",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=600&fit=crop&crop=center",
+      "description": "New Balance Fresh Foam X 1080v12 for ultimate comfort.",
+      "category": "Running Shoes",
+      "sizes": ["7", "8", "9", "10", "11", "12"],
+      "colors": ["Black/Thunder", "White/Gum", "Grey/Yellow"],
+      "material": "Hypoknit upper",
+      "features": ["Fresh Foam X", "Blown rubber outsole", "Ortholite footbed"]
+    },
+    {
+      "id": 12,
+      "brandId": 5,
+      "name": "327 Retro",
+      "price": 90,
+      "image": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=600&h=600&fit=crop&crop=center",
+      "description": "New Balance 327 with retro-inspired design.",
+      "category": "Lifestyle Shoes",
+      "sizes": ["6", "7", "8", "9", "10", "11"],
+      "colors": ["Grey/White", "Navy/Red", "Green/Yellow"],
+      "material": "Suede and nylon upper",
+      "features": ["Vintage styling", "Rubber outsole", "Lace-up closure"]
+    },
+    {
+      "id": 13,
+      "brandId": 6,
+      "name": "Club C 85",
+      "price": 75,
+      "image": "https://images.unsplash.com/photo-1520256862855-398228c41684?w=600&h=600&fit=crop&crop=center",
+      "description": "Reebok Club C 85 with classic tennis shoe design.",
+      "category": "Lifestyle Shoes",
+      "sizes": ["6", "7", "8", "9", "10", "11", "12"],
+      "colors": ["White/Green", "White/Navy", "All White"],
+      "material": "Leather upper",
+      "features": ["Die-cut EVA midsole", "High abrasion rubber outsole", "Low-cut design"]
+    },
+    {
+      "id": 14,
+      "brandId": 6,
+      "name": "Training Supply Tee",
+      "price": 25,
+      "image": "https://images.unsplash.com/photo-1583743089695-4b816a340f82?w=600&h=600&fit=crop&crop=center",
+      "description": "Reebok Training Supply Tee for workout sessions.",
+      "category": "Athletic Apparel",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["Black", "Grey", "Navy", "White"],
+      "material": "Cotton blend",
+      "features": ["Speedwick technology", "Regular fit", "Crew neck"]
+    }
+  ]
+} 
