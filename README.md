@@ -15,8 +15,15 @@
 - **Styling**: Tailwind CSS 4.1.8
 - **Icons**: React Icons 5.5.0
 - **Mock API**: JSON Server 1.0.0-beta.3
-- **Development**: Concurrently for running multiple servers
 
+1. State Management
+State management adalah proses mengatur dan menyimpan data yang sering berubah-ubah dalam aplikasi web, agar data tersebut tetap konsisten dan mudah diakses di berbagai komponen. Dalam pengembangan frontend, ini sangat penting untuk memastikan UI selalu sinkron dengan data yang sedang digunakan.
+Beberapa contoh implementasinya yang saya kerjakan:
+•	User Info: Menyimpan informasi pengguna yang sedang login, seperti nama, jabatan, atau divisi, yang kemudian digunakan secara global, misalnya untuk kebutuhan akses role-based atau tampilan personalisasi.
+2. TanStack
+Saya memiliki pengalaman menggunakan TanStack Query dan TanStack Table (sebelumnya React Table) dalam pengembangan frontend.
+•	TanStack Query saya gunakan untuk pengambilan data dari API dengan dukungan caching dan auto-refetching. Salah satu contoh kasus penggunaannya adalah pada pengambilan data mesin yang divisualisasikan ke dalam bentuk dashboard. Fitur state management-nya juga sangat membantu untuk menyimpan dan mengelola response API, sehingga tidak perlu menulis ulang logika pemanggilan data di berbagai tempat.
+•	TanStack Table saya gunakan sebagai komponen utama untuk menampilkan data dalam bentuk tabel. Library ini fleksibel dan sangat membantu, terutama saat saya perlu menerapkan pagination secara manual atau dengan pendekatan server-side pagination, tergantung kebutuhan proyek.
 
 ## Getting Started
 
