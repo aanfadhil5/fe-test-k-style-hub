@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import { FiArrowRight, FiCalendar, FiMapPin } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import ErrorMessage from '../components/ErrorMessage';
-import Loading from '../components/Loading';
-import Pagination from '../components/Pagination';
-import { useBrands } from '../hooks/useApi';
+
+import ErrorMessage from '@/components/ErrorMessage';
+import Loading from '@/components/Loading';
+import Pagination from '@/components/Pagination';
+
+import { useBrands } from '@/hooks/useApi';
 
 const Brands = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  
   const { data, isLoading, error, refetch } = useBrands(currentPage, 4);
+
   if (isLoading) {
     return <Loading text="Loading brands..." />;
   }
@@ -30,6 +34,7 @@ const Brands = () => {
           Discover premium sportswear and lifestyle brands from around the world
         </p>
       </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-7 px-1">
         {data?.data?.map((brand) => (
           <div key={brand.id} className="card group">

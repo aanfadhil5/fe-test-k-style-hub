@@ -1,14 +1,17 @@
 import { FiArrowLeft, FiCheckCircle, FiDollarSign, FiPackage, FiTag } from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
-import ErrorMessage from '../components/ErrorMessage';
-import Loading from '../components/Loading';
-import { useBrand, useProduct } from '../hooks/useApi';
+
+import ErrorMessage from '@/components/ErrorMessage';
+import Loading from '@/components/Loading';
+
+import { useBrand, useProduct } from '@/hooks/useApi';
 
 const ProductDetail = () => {
-  const { productId } = useParams();
+  const { productId } = useParams<{ productId: string }>();
+  
   const { data: product, isLoading: productLoading, error: productError, refetch } = useProduct(productId);
+  
   const { data: brand, isLoading: brandLoading } = useBrand(product?.brandId);
-
 
   if (productLoading || brandLoading) {
     return <Loading text="Loading product details..." />;
@@ -53,6 +56,7 @@ const ProductDetail = () => {
             />
           </div>
         </div>
+        
         <div className="space-y-6 pr-2">
           {brand && (
             <div className="flex items-center space-x-3">
@@ -69,6 +73,7 @@ const ProductDetail = () => {
               </Link>
             </div>
           )}
+
           <div>
             <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               {product.name}
@@ -78,10 +83,12 @@ const ProductDetail = () => {
               <span>{product.price}</span>
             </div>
           </div>
+          
           <div className="flex items-center space-x-2 text-gray-600">
             <FiTag className="w-5 h-5" />
             <span className="text-lg">{product.category}</span>
           </div>
+          
           <div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Description</h3>
             <p className="text-gray-600 leading-relaxed text-lg">
@@ -89,13 +96,16 @@ const ProductDetail = () => {
             </p>
           </div>
 
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
-              <FiPackage className="w-5 h-5 mr-2" />
-              Material
-            </h3>
-            <p className="text-gray-600 text-lg">{product.material}</p>
-          </div>
+          {product.material && (
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                <FiPackage className="w-5 h-5 mr-2" />
+                Material
+              </h3>
+              <p className="text-gray-600 text-lg">{product.material}</p>
+            </div>
+          )}
+          
           {product.features && product.features.length > 0 && (
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Key Features</h3>
@@ -109,6 +119,7 @@ const ProductDetail = () => {
               </ul>
             </div>
           )}
+          
           {product.sizes && product.sizes.length > 0 && (
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Available Sizes</h3>
@@ -139,14 +150,6 @@ const ProductDetail = () => {
               </div>
             </div>
           )}
-          <div className="flex space-x-4 pt-7">
-            <button className="flex-1 btn-primary text-lg py-3">
-              Add to Cart
-            </button>
-            <button className="btn-secondary text-lg py-3">
-              Add to Wishlist
-            </button>
-          </div>
         </div>
       </div>
     </div>

@@ -1,18 +1,26 @@
 import { useState } from 'react';
 import { FiArrowLeft, FiDollarSign, FiTag } from 'react-icons/fi';
 import { Link, useParams } from 'react-router-dom';
-import ErrorMessage from '../components/ErrorMessage';
-import Loading from '../components/Loading';
-import Pagination from '../components/Pagination';
-import { useBrand, useProductsByBrand } from '../hooks/useApi';
+
+import ErrorMessage from '@/components/ErrorMessage';
+import Loading from '@/components/Loading';
+import Pagination from '@/components/Pagination';
+
+import { useBrand, useProductsByBrand } from '@/hooks/useApi';
 
 const BrandProducts = () => {
-  const { brandId } = useParams();
-  const [currentPage, setCurrentPage] = useState(1);
+  const { brandId } = useParams<{ brandId: string }>();
   
-  // Fetch brand info and products
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  
   const { data: brand, isLoading: brandLoading, error: brandError } = useBrand(brandId);
-  const { data: productsData, isLoading: productsLoading, error: productsError, refetch } = useProductsByBrand(brandId, currentPage, 6); // 6 products per page
+  
+  const { 
+    data: productsData, 
+    isLoading: productsLoading, 
+    error: productsError, 
+    refetch 
+  } = useProductsByBrand(brandId, currentPage, 6); 
 
   if (brandLoading || productsLoading) {
     return <Loading text="Loading products..." />;
@@ -98,6 +106,7 @@ const BrandProducts = () => {
           </div>
         ))}
       </div>
+      
       {productsData?.data?.length === 0 && (
         <div className="text-center py-12">
           <p className="text-gray-500 text-lg">No products found for this brand.</p>

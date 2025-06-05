@@ -1,10 +1,12 @@
 import { FiGrid } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
 
-const Navigation = () => {
+
+  const Navigation = () => {
   const location = useLocation();
   
-  const isActive = (path) => {
+
+  const isActive = (path: string): boolean => {
     return location.pathname === path;
   };
 
@@ -20,7 +22,7 @@ const Navigation = () => {
             <span className="text-xl font-bold text-gray-900">Store</span>
           </Link>
 
-
+    
           <div className="flex space-x-8 mr-2">
             <Link
               to="/brands"

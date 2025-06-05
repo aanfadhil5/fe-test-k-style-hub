@@ -1,9 +1,17 @@
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+interface PaginationProps {
+  currentPage: number;           
+  totalPages: number;            
+  onPageChange: (page: number) => void;  
+}
+
+
+const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) => {
   if (totalPages <= 1) return null;
-  const getPageNumbers = () => {
-    const pages = [];
+  
+  const getPageNumbers = (): number[] => {
+    const pages: number[] = [];
     const maxPagesToShow = 5;
     
     if (totalPages <= maxPagesToShow) {
@@ -22,7 +30,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     return pages;
   };
 
-
   return (
     <div className="flex items-center justify-center space-x-2 mt-8">
       <button
@@ -33,6 +40,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         <FiChevronLeft className="w-4 h-4 mr-1" />
         Previous
       </button>
+      
       <div className="flex space-x-1">
         {getPageNumbers().map((page) => (
           <button
@@ -48,6 +56,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           </button>
         ))}
       </div>
+      
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
